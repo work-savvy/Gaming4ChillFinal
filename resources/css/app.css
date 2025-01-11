@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern/Gaming Touch */
+
+/* ... other CSS ... */
+
+.hero {
+    @apply pt-20 relative overflow-hidden;
+    /* Added relative and overflow-hidden */
+}
+
+.animate-blob {
+    @apply animate-blob-move;
+}
+
+@keyframes blob-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#closeModal {
+    @apply text-gray-600 hover:text-gray-800;
+}
+
+#closeModal svg {
+    @apply h-6 w-6;
+}
+
+/* ... other CSS ... */
+
+@layer utilities {
+    .animate-blob-move {
+        animation: blob-move 5s ease-in-out infinite;
+    }
+}
+
+.title-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.tournament-page {
+    @apply relative bg-cover bg-center py-12 overflow-hidden;
+}
+@keyframes blob-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* ... other CSS ... */
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* ... other CSS ... */
+
+.nav-link {
+    @apply text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+    @apply text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.btn-secondary {
+    @apply text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.user-menu-button {
+    @apply max-w-xs bg-gray-700 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white transition-all duration-200;
+}
+
+.user-menu-button:hover {
+    @apply bg-gray-600 transform scale-105;
+    /* Subtle zoom effect on hover */
+}
+
+.mobile-menu-button {
+    @apply bg-gray-700 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white transition-all duration-200;
+}
